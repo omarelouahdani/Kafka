@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: inventory-service
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:product
+eureka:
+  client:
+    server-url:
+      defaultZone: http://localhost:8761/eureka
+keycloak:
+  realm: tp-realm
+  resource: products-app
+  auth-server-url: http://localhost:8080/auth
+  bearer-only: true
+  realm-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi3gsmFw+QWKyvkcyJB+JUETwKUI/Ubo8WtvyB3+5USzaqbm+jgKMv0Yy+L9pxVmYQCruJNdcRoUyahc+NHzYsnq2f22lKnwxCJBPk7o5Jtr4o7nrlUTPkl9hmmvc8XI1goE3X4wtBh1vi1o8bGwJ+bkcfiDhqXALWNa7S4Ha8qJ7TK3ADJA/SVgPMYYMAEr6gYjfvEsjYcimsWIRup8OXsnZiot34Fqpox6Q3btfelUZPT+JgegjsaaevIOodMk4aoDAsO3MbEIISx2MPsZB66oLI43UnJsoBt1ptXuN0cPxgMLkrvElSPyJ8v7ieDhp1HeoSa7T/3v+rFfmTm2MBQIDAQAB
